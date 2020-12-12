@@ -1,10 +1,11 @@
 @import "style.css" ;
 
-
+section.detalleProducto {
+width: 80%;
+}
 .detalle-imagen{
-    height: 440px;
-    width: 500px;
-    margin: 15px auto;
+    
+   width: 60%;
     border-radius: 40px;
     border: solid 2px black;
 }
@@ -12,22 +13,24 @@
 .detalle-titulo{
     text-align: center;
     font-weight: bold;
+    margin: 30px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
 }
 .detalle-titulo2{
     
         text-align: center;
         font-weight: bold;
+        color: white;
     }
 
 .select-color{
-    margin-left: 33%;
     border-radius: 30px;
     background-color: gray;
     font-weight: bold;
 }
 
 .select-talle{
-    margin-left: 20px;
     border-radius: 30px;
     background-color: gray;
     font-weight: bold;

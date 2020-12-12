@@ -1,55 +1,72 @@
+
 <%-include('partials/head') %>
 
-<%- include('partials/header') %>
-
-
-
 <main>
-    <% if( typeof errors != 'undefined' ) { %>
-    <ul>
-        <% errors.forEach(error => { %>
-        <li> <%= error.msg %> </li>
-        <% }) %>
-    </ul>
-    <% } %>
 
+    <div class="row mt-5">
 
+        <section class="formulario mt-5">
+            <div class="col-12">
+                <div class="row d-flex justify-content-end">
+                    <!-- TITULO PRINCIPAL-->
+                    <a href="/">
+                        <h1 class="">OVERFLOD SHOES</h1>
+                    </a>
 
-    <div class="row">
-        <section>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inicio">
-                <h2>Registrate</h2>
-                <p>¿Ya tíenes cuenta? <a href="/usuarios/login">Click aquí!</a></p>
+                </div>
+                <hr>
+                <h2 class="my-4">Registrate</h2>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 registro">
-                <form action="" method="POST" id="registro">
-                    <h4>Nombre</h4>
-                    <center><input class="informacion" placeholder="Ingrese su nombre..." type="text" name="nombre"
-                            id="nombre"></center><br>
-                    <center><span id="errorNombre" class="text-danger"></span></center><br>
-                    <h4>Apellido</h4>
-                    <center><input class="informacion" placeholder="Apellido..." type="text" name="apellido"
-                            id="apellido"></center><br>
-                    <center><span id="errorApellido" class="text-danger"></span></center><br>
-                    <h4>Correo electronico</h4>
-                    <center><input class="informacion" placeholder="Correo electronico..." type="email" name="email"
-                            id="email"></center><br>
-                    <center><span id="errorEmail" class="text-danger"></span></center><br>
-                    <h4>Contraseña</h4>
-                    <center><input class="informacion" placeholder="Contraseña..." type="password" name="password"
-                            id="contraseña"></center><br>
-                    <center> <span id="errorContraseña" class="text-danger"></span></center><br>
-                    <center><input class="informacion2" type="checkbox" name="checkbox" value="" id="checkbox"> <span
-                            class="checkbox">Acepto los terminos y condiciones</span></center> <br>
-                    <center><span id="errorCheckbox" class="text-danger"></span></center><br>
-                    <button class="boton-enviar" type="submit">Contínuar</button>
-                    <button class="boton-borrar" type="reset">Cancelar</button>
+            <div class="col-12 login">
+
+                <form method="POST" id="registro">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="exampleInputEmail1">Nombre</label>
+                            <input type="text" class="form-control" placeholder="" id="nombre" name="nombre">
+                            <small id="errorNombre"
+                                class="form-text text-warning"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %></small>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="exampleInputEmail1">Apellido</label>
+                            <input type="text" class="form-control" placeholder="" id="apellido" name="apellido">
+                            <small id="errorApellido"
+                                class="form-text text-warning"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %></small>
+                        </div>
+                    </div>
+                   <div class="row">
+                    <div class="form-group col-6">
+                        <label for="exampleInputEmail1">Correo electrónico</label>
+                        <input type="email" class="form-control" placeholder="" id="email" name="email">
+                        <small id="errorEmail"
+                            class="form-text text-warning"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %></small>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="exampleInputPassword1">Contraseña</label>
+                        <input type="password" class="form-control" placeholder="" id="contraseña" name="password">
+                        <small id="errorContraseña"
+                            class="form-text text-warning"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %></small>
+                    </div>
+                   </div>
+                  
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="checkbox" id="checkbox">
+                        <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
+                        <small id="errorCheckbox"
+                        class="form-text text-warning"></small>
+                    </div>
+                    <div class="text-center mt-2">
+                        <button type="submit" class="btn btn-outline-light">Continuar</button>
+                    </div>
                 </form>
+                <div class="d-flex justify-content-around mt-4">
+                    <p>¿Ya tenés cuenta? <a href="/usuarios/login">Click aquí!</a></p>
+                </div>
+
             </div>
         </section>
     </div>
 </main>
-<%- include('./partials/footer.ejs')  %>
 </body>
 
 </html>

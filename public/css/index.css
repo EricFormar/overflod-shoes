@@ -25,6 +25,7 @@
 }
 .fotoArticulo{
     margin-top: 20px;
+    height: 420px;
 
 }
 .fotoArticulo h3{
@@ -52,7 +53,7 @@
     color: black;
     text-shadow: gray 2px 2px 5px;
     position: absolute;
-    top: 47%;
+    top: 55%;
     right: 5%;
     background-color: white;
     border-radius: 3%;
@@ -94,13 +95,12 @@ and (max-device-width : 1023px){
     }
 
      .fotoArticulo img{
-        width: 165px;    
         margin: 0px;
         margin-left: 3px;
 }
 
-    .fotoArticulo h2{
-    font-size: 25px;
+    .fotoArticulo h3{
+    font-size: 20px;
 }
 .verTodos{
     margin-left: 40%;
@@ -119,6 +119,10 @@ and (max-device-width : 1023px){
     border-radius: 3%;
     width: 100px;
     border: 1px solid black;
+}
+.fotoArticulo{
+    height: 300px;
+
 }
 }
 

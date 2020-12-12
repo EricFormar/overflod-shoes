@@ -4,7 +4,7 @@ let qs = function (elemento) {
 
 
 window.addEventListener('load', () => {
-    console.log('llegamos');
+    console.log('llegamos al registro!');
 
     let formulario = qs('form#registro')
 
@@ -100,13 +100,13 @@ window.addEventListener('load', () => {
             errorCheckbox.innerHTML = "Debes aceptar las bases y condiciones"
         }
         let error = false
-        for (let index = 0; index < elementos.length-2; index++) {
+        for (let index = 0; index < elementos.length-1; index++) {
             if(index != 5 && elementos[index].value == 0){
                 elementos[index].classList.add('is-invalid');
                error = true;
             }
         }
-        if(error){
+        if(!error){
             formulario.submit()
         }else{
             msgError.innerHTML = "Los campos señadados son obligatorios"

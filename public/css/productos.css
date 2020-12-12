@@ -20,6 +20,30 @@
 .titulo-listado{
     text-align: center;
 }
+.precio{
+    position: absolute;
+    padding: 10px;
+    background-color: yellow;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+    top:10%;
+    left:5%
+}
+
+.fotoArticulo p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-shadow: gray 2px 2px 5px;
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    background-color: white;
+    border-radius: 3%;
+    width: 100px;
+    border: 1px solid black;
+}
+
 
 /* Media queries TABLET */
 @media only screen 
@@ -29,5 +53,8 @@ and (max-device-width : 1023px) {
 
      width: 200px;
      margin-left: 18px;
+    }
+    p.precio{
+        background-color: blue;
     }
     }
