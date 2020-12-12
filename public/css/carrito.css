@@ -1,0 +1,120 @@
+@import "style.css";
+
+.img-art-carro{
+    background-color: rgb(15, 49, 49);
+    margin-top: 3em;
+    height: 170px;
+    width: 170px;
+    border: solid 1px black;
+    padding: 5px;
+    order: 0;
+}
+.car_articulo{
+    color: whitesmoke;
+    margin-top: 1em;
+}
+.icono-carrito{    
+    margin-top: 6em;
+    margin-left: 1em;
+}
+#detalle_carrito{
+    background-color: rgb(15, 49, 49);
+    padding: 1em;
+    margin-top: 3em;
+    margin-right: 1em;
+    border: black;
+    border-style: groove;
+    overflow: hidden;
+}
+#cantidad{
+    float: left;
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+.seccion-carrito{
+    float: right;
+    float: top;
+    border: solid 1px gray;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.seccion-carrito p{
+    color: wheat;
+}
+
+.mercado-pago{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.efectivo{
+    width: 50px;
+    margin-left: 10px;
+}
+.input-pago{
+    margin-left: 20px;
+}
+.comprar{
+    margin-left: 60px;
+}
+
+/* Media queries TABLET */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1023px) {
+
+.efectivo{
+    margin: 0;
+    width: 35px;
+}
+.mercado-pago{
+    width: 40;
+    height: 40px;
+    margin: 0;
+}
+.seccion-carrito{
+    margin-top: 22px;
+    margin-right: 0;
+    float: none;
+}
+.img-art-carro{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+}
+.boton-carrito{
+    margin-left: 18px;
+}
+#detalle_carrito{
+    margin-left: 80px;
+}
+
+.img-producto{
+    margin-left: 30px;
+}
+
+.icono-carrito{    
+    margin-top: 6em;
+}
+}
+
+/* Media queries Dispositivo Moviles */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) {
+
+    .col-sm-4, .col-xs-3{
+        width: 135px;
+    }
+    .car_articulo{
+        text-align: center;
+    }
+    .opciones{
+        margin-left: 78px;
+    }
+    .input-pago{
+        margin: 0;
+    }
+}

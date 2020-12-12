@@ -1,0 +1,82 @@
+@import "style.css" ;
+
+.input{
+    margin-left: 100px;
+    width: 320px;
+    border-radius: 30px;
+}
+
+.label{
+    margin-left: 30%;
+    font-size: 28px;
+    color: gray;
+}
+
+textarea{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.imagen{
+    margin-left: 26%;
+    width: 380px;
+    height: 365px;
+    border-radius: 30px;
+}
+.texto{
+    color: burlywood;
+    text-align: center;
+}
+.enviar{
+    margin-left: 32%;
+border-radius: 20px;
+}
+
+
+.figure-datos-actuales{
+        border-left: solid 2px gray;
+    }
+    
+/* Media queries TABLET */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1023px) {
+    .input{
+        margin-left: 20px;
+    }
+    textarea{
+        margin-left: 30px;
+    }
+    .imagen{
+        margin-left: 20px;
+        width: 320px;
+        height: 300px;
+    }
+    }
+
+
+    /* Media queries Dispositivo Moviles */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) {
+
+    .input{
+        margin-left: 21px;
+    }
+    textarea{
+        margin-left: 37px;
+    }
+    .imagen{
+        margin-left: 48px;
+        width: 270px;
+        height: 270px;
+    }
+    .label{
+        margin-left: 34%;
+    }
+    .enviar{
+        margin-left: 40%;
+    }
+}

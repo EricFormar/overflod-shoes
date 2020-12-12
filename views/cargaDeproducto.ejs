@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--HEAD-->
+<%-include('partials/head') %>
+
+<body>
+
+    <!--HEADER-->
+  <%- include('partials/header') %>
+
+
+  <h1 class="carga">Carga De Producto</h1>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <form id="form" action="/productos/agregarProducto" method="POST" enctype="multipart/form-data">
+      <label for="Producto">Nombre</label>
+      <input style="height: 20px;" size="30" type="text" name="nombre" id="nombre"><br>
+      <span id="errorNombre" class="text-danger"></span><br>
+      <label for="Producto">Precio</label>
+     
+      <input style="height: 20px;" size="30" type="number" name="precio" id="precio"><br>
+      <span id="errorPrecio" class="text-danger"></span>
+      <label for="Producto">descripcion</label><br>
+      <textarea name="descripcion" id="descripcion" cols="30" rows="2" placeholder="breve descripción..." ></textarea><br>
+      <span id="errorDescripcion" class="text-danger"></span><br>
+      <label for="categories">Categoria</label>
+      <select name="categoria" id="categoria">
+        <span id="errorCategoria" class="text-danger"></span><br>
+        <option value="">Elige una opción</option>
+            <% categories.forEach(categoria => { %>
+                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                <% }) %>
+      </select>
+      <br>
+      <br>
+
+      <label for="marca">Marca</label>
+      <select name="marca" id="marca">
+        <span id="errorMarca" class="text-danger"></span><br>
+        <option value="">Elige una marca</option>
+            <% marca.forEach(marca => { %>
+                <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                <% }) %>
+      </select>
+      <br>
+      <br>
+
+      <label for="color">Colores</label>
+      <select name="color" id="color">
+        <span id="errorColor" class="text-danger"></span><br>
+        <option value="">Elige un color</option>
+            <% colores.forEach(color => { %>
+                <option value="<%= color.id %>"><%= color.color %></option>
+                <% }) %>
+      </select>
+      <br>
+      <br>
+
+      <label for="talle">Talles</label>
+      <select name="talle" id="talle">
+        <span id="errorTalle" class="text-danger"></span><br>
+        <option value="">Elige un talle</option>
+            <% talle.forEach(talle => { %>
+                <option value="<%= talle.id %>"><%= talle.talle %></option>
+                <% }) %>
+      </select>
+      <br>
+      <br>
+       <button class="botones" type="submit" onchange="alert('El producto fue agregado a la base de datos correctamente.')" >Enviar</button>
+      <button class="botones" type="reset">Borrar</button>
+      
+    
+  </div>
+</div> 
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   <div class="Imagenp">
+      <input class="subir-imagen" type="file" name="imagen" id="imagen">
+      <span id="errorImagen" class="text-danger"></span>
+    </form>
+   </div>
+  </div>
+</div>
+  
+    
+
+
+ <!--FOOTER-->
+  <%- include('partials/footer') %>
+ 
+ 
+
+</body>
+</html>
+
+<div>
+  <input type="file" name="" id="">
+</div>
+

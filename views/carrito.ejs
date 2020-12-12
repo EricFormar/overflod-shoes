@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--HEAD-->
+<%-include('partials/head') %>
+
+<body>
+
+    <!--HEADER-->
+    <%- include('partials/header') %>
+    <!--FIN HEADER-->
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-1 col-md-1 col-sm-4 col-xs-1">
+                <div class="icono-carrito">
+                    <svg width="3em" height="3em" color="white" viewBox="0 0 16 16" class="bi bi-cart-check carrito" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        <path fill-rule="evenodd" d="M11.354 5.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    <input class="boton-carrito" type="radio" class="boton" name="" value="">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4 img-producto">
+                <img class="img-art-carro" src="/img/productosAgregados/<%= producto.imagenes %> " alt="">
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12" id="detalle_carrito">
+                <h3 class="car_articulo">Producto: <%= producto.nombre %> | Color: <%= producto.color.color %> | Talle: <%= producto.talle.talle %><br>Precio $<%= producto.precio %><br><br>Cantidad:</h3>
+                <select class="opciones" name="Cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button class="comprar" type="submit">comprar!</button>
+                <li class="seccion-carrito">
+                    <p>Forma de pago</p>
+                    <input class="input-pago" type="radio" name="Metodo de pago" value="Debito"><img class="debito" src="https://img.icons8.com/color/48/000000/visa.png"/></input>
+                    <input class="input-pago" type="radio" name="Metodo de pago" value="mastercard"><img class="mastercard" src="https://img.icons8.com/color/48/000000/mastercard.png"/></input>
+                    <input class="input-pago" type="radio" name="Metodo de pago" value="mercadopago"><img class="mercado-pago" src="https://www.mercadopago.com/org-img/Manual/ManualMP/imgs/isologoVertical.png" alt=""></input>
+                    <input class="input-pago" type="radio" name="Metodo de pago" value="Efectivo"><img class="efectivo" src="https://img.icons8.com/plasticine/100/000000/cash-in-hand.png"/></input>
+                </li>
+               
+            </div>
+        </div> <!--termina el row-->>
+    </div> <!--termina el container fluid-->
+
+    <!--Boton volver arriba-->
+
+    <div class="volver-arriba">
+        <a href="#">
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-up-circle-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            </svg></a>
+        
+    </div>
+    <!--FOOTER-->
+    <%- include('partials/footer') %>
+</body>

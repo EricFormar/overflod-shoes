@@ -1,0 +1,27 @@
+<%- include('partials/head')  %>
+
+
+<%- include('partials/header') %> 
+<div class="row">
+    <div class="col-12">
+    <h1 class="titulo-listado" >Resultados para su busqueda <%= busqueda %></h1>
+
+  
+  
+    </div>
+        <% productos.forEach(producto => { %>
+            
+             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 recuadro">
+          <div class="contenido">
+            <figure>
+              <img class="articulo-foto" src="/img/productosAgregados/<%= producto.imagenes %> " alt="" /></a>
+              <h4> <a href="/productos/detalle/<%= producto.id %>">  <%= producto.nombre %> </a> </h4>
+              <h4> $<%= producto.precio %>  </h4>
+              <p> Categoria: <%= producto.categoria.nombre %>  </p>
+            </figure>
+            <article>
+        </div>
+        </div>
+        <% }) %> 
+</div>
+        <%- include('partials/footer')  %>

@@ -1,0 +1,62 @@
+<%-include('partials/head') %>
+
+<%-include('partials/header') %>
+
+<body>
+    <main>
+        <% if (typeof usuario != "undefined") { %>
+            <h1 class="titulo-perfil">Bienvenido nuevamente <%- usuario.nombre%> !</h1>
+        <div class="row">
+           
+            
+            <div class="col-4" class="border" id="perfil">
+               
+                <br>
+                
+                <h2>Datos personales: </h2> <br>
+                <h4 class="datos-perfil">Nombre: <%- usuario.nombre%></h4><br>
+                <h4 class="datos-perfil">Apellido: <%- usuario.apellido%></h4><br>
+                <h4 class="datos-perfil">Mail: <%- usuario.email %></h4><br>
+                <h4 class="datos-perfil">Nivel de usuario: <%- usuario.rango %></h4>
+               
+            </div>
+
+            <div class="col-3">
+                <h2 class="titulo-modificar">Modificar datos</h2>
+                <form action="/usuarios/perfil/<%= usuario.id %>?_method=PUT" method="POST">
+
+                    <h4 class="datos-perfil2">Nombre</h4>
+                    <input class="input-modificar-datos" type="text" name="nombre" id="nombre" value="<%= usuario.nombre %>">
+
+                    <h4 class="datos-perfil2">Apellido</h4>
+                    <input class="input-modificar-datos" type="text" name="apellido" id="apellido" value="<%= usuario.apellido %>">
+
+                    <h4 class="datos-perfil2">Nacimiento(*)</h4>
+                    <input class="input-modificar-datos" type="date" name="fecha" id="fecha" value="<%= usuario.fecha %>">
+<br>
+                    <button class="boton-guardar" type="submit">Guardar cambios</button>
+                </div>
+
+                <div class="col-3 div-datos-3">
+                    <h4 class="datos-perfil2">Provincia(*)</h4>
+                    <input class="input-modificar-datos2" type="text" name="provincia" id="provincia" value="<%= usuario.provincia %>">
+
+                    <h4 class="datos-perfil2">Ciudad(*)</h4>
+                    <input class="input-modificar-datos2" type="text" name="ciudad" id="ciudad" value="<%= usuario.ciudad %>">
+
+                    <h4 class="datos-perfil2">Direccion(*)</h4>
+                    <input class="input-modificar-datos2" type="text" name="direccion" id="direccion" value="<%= usuario.direccion %>">
+                    <h6 class="datos-opcionales" >(*) datos opcionales</h6>
+                </div>
+                
+               </form>
+               <% } %>
+               
+        </div>
+        <form action="/usuarios/eliminar/<%= usuario.id %>?_method=DELETE" method="POST">
+            <br><button class="enviar" >Eliminar usuario</button>
+          </form>
+    </main>
+</body>
+
+<%-include('partials/footer') %>

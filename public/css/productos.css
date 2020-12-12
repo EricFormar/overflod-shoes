@@ -1,0 +1,33 @@
+@import "style.css";
+
+.articulo-foto{
+    width: 300px;
+    margin-left: 60px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.recuadro{
+    border: solid 1px gray;
+    margin-top: 20px;
+}
+
+.agregarProducto{
+    margin-left: 15px;
+    border: solid 1px;
+}
+
+.titulo-listado{
+    text-align: center;
+}
+
+/* Media queries TABLET */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1023px) {
+    .articulo-foto{
+
+     width: 200px;
+     margin-left: 18px;
+    }
+    }

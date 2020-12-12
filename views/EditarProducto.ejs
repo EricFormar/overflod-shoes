@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--HEAD-->
+<%-include('partials/head') %>
+
+<body>
+
+    <!--HEADER-->
+  <%- include('partials/header') %>
+
+  
+  <h1 class="carga">Editar producto</h1>
+ 
+    <div class="row">
+
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 todo">
+        <form action="/productos/editarProducto/<%= producto.id %>?_method=PUT" method="POST">
+          <label class="label" for="">Nombre</label><br>
+          <input class="input" type="text" name="nombre" value="<%= producto.nombre %>" id="">
+          <br>
+          <label class="label" for="">  Precio</label><br>
+          <input class="input" type="number" name="precio" value="<%= producto.precio %>" id="">
+          <br>
+          <label class="label" for="">Categoria</label> <br>
+          <select  class="input" name="categoria" value="<%= producto.categoria %>" id="">
+            <option value="">Elige una opción</option>
+           
+                <option value="<%= producto.categoria.id %>"><%= producto.categoria.nombre %></option>
+               
+          </select>
+           <br>
+          <textarea name="descripcion" cols="40" rows="2"  placeholder="<%= producto.descripcion %>"></textarea><br>
+          <button class="enviar" type="submit">Guardar</button> <br>
+        </form>
+       
+        <form action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+          <br><button class="enviar" >Eliminar producto</button>
+        </form>
+      
+        
+      </div>
+
+                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <h1 class="texto">Detalles actuales</h1>   
+                <figure class="figure-datos-actuales" >
+                  <p class="texto"> <a href="/productos/detalle/<%= producto.id %>"> Nombre: <%= producto.nombre %> </a> </p>
+                  <p class="texto" >Precio: $ <%= producto.precio %>  </p>
+                  
+                  <p class="texto" >Categoria: <%= producto.categoria.nombre %>  </p>
+                  
+                  <p class="texto"  >Descripción: <%= producto.descripcion %> </p>
+                  <img class="imagen"src="/img/productosAgregados/<%= producto.imagenes %>" alt="" /></a>
+                  
+                </figure>
+                <article>
+            </div>
+          
+              
+           
+    </div>
+    
+ 
+
+ <!--FOOTER-->
+  <%- include('partials/footer') %>
+
+

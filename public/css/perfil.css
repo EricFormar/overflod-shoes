@@ -1,0 +1,45 @@
+@import "style.css";
+
+#perfil{
+    background-color: #24303c;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    text-align: center;
+    border: black solid;
+    color: rgb(7, 5, 131);
+    margin: 20px auto;
+    margin-left: 40px;
+}
+
+.titulo-perfil{
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-modificar-datos{
+    margin-bottom: 15px;
+}
+.input-modificar-datos2{
+    margin-bottom: 15px;
+}
+
+.datos-perfil{
+    font-weight: bold;
+}
+.datos-perfil2{
+    margin-right: 50%;
+    font-weight: bold;
+}
+
+.div-datos-3{
+    margin-top: 5.5%;
+}
+
+.boton-guardar{
+    margin-top: 20px;
+    margin-left: 58%;
+    border-radius: 10px;
+}
+
+.datos-opcionales{
+    color: red;
+}
